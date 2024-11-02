@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "target": "ES2020",
+      "lib": ["es2022","dom"],
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["./src/*"]
+      },
+      "module": "commonjs",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+       
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+  }

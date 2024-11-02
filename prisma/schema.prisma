@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Device {
+  id             Int           @id @default(autoincrement())
+  name           String
+  ipAddress      String        @unique
+  lastChecked    DateTime      @default(now()) @map("last-Checked")
+  updatedAt      DateTime      @updatedAt @map("updated_at")
+  DeviceStatus   DeviceStatus? @relation(fields: [deviceStatusId], references: [id])
+  deviceStatusId Int?
+  DeviceLog      DeviceLog[]
+
+  @@map("devices")
+}
+
+model DeviceStatus {
+  id      Int      @id @default(autoincrement())
+  status  String
+  devices Device[]
+
+  @@map("device_statuses")
+}
+
+model DeviceLog {
+  id        Int      @id @default(autoincrement())
+  deviceId  Int
+  device    Device   @relation(fields: [deviceId], references: [id])
+  status    String
+  timestamp DateTime @default(now())
+
+  @@unique([deviceId, timestamp])
+  @@map("device_logs")
+}
