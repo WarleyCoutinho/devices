@@ -23,6 +23,19 @@ Este projeto é construído sobre uma stack moderna e robusta, garantindo efici�
 
 Com essa stack tecnológica, o **Devices** oferece uma base sólida para o desenvolvimento de aplicações web modernas, priorizando segurança, desempenho e facilidade de uso.
 
+```bash
+## crie o .env na raiz do seu projeto para con as informaçoes abaixo
+PORT=3000
+
+POSTGRES_USER=colocar-aqui-seu-user-do-banco
+POSTGRES_PASSWORD=colocar-aqui-seu-password
+POSTGRES_DB=colocar-aqui-seu-database
+
+
+DATABASE_URL="postgresql://colocar-aqui-seu-user-do-banco:colocar-aqui-seu-password@localhost:5432/colocar-aqui-seu-database?schema=public"
+
+```
+
 ## Getting Started
 
 Para iniciar o servidor de desenvolvimento, execute:
