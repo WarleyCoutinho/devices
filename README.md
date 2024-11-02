@@ -23,8 +23,9 @@ Este projeto é construído sobre uma stack moderna e robusta, garantindo efici�
 
 Com essa stack tecnológica, o **Devices** oferece uma base sólida para o desenvolvimento de aplicações web modernas, priorizando segurança, desempenho e facilidade de uso.
 
-```mermaid
 Isso deve fornecer uma representação clara das relações entre os modelos no banco de dados.
+
+```mermaid
 graph TD
     A[Device] -->|has| B[DeviceStatus]
     A -->|logs| C[DeviceLog]
