@@ -23,6 +23,28 @@ Este projeto é construído sobre uma stack moderna e robusta, garantindo efici�
 
 Com essa stack tecnológica, o **Devices** oferece uma base sólida para o desenvolvimento de aplicações web modernas, priorizando segurança, desempenho e facilidade de uso.
 
+### Explicação do Diagrama:
+
+- **Device**: Representa o dispositivo. Tem uma relação opcional com `DeviceStatus` e pode ter múltiplos registros em `DeviceLog`.
+- **DeviceStatus**: Representa o status do dispositivo. Um status pode estar associado a múltiplos dispositivos.
+- **DeviceLog**: Representa os logs de cada dispositivo. Cada log está associado a um único dispositivo.
+
+### Como Usar:
+
+- Certifique-se de que o suporte para Mermaid esteja habilitado na sua plataforma de visualização de Markdown (como GitHub ou outros).
+- Cole o código acima no seu arquivo `README.md` para visualizar o diagrama.
+
+Isso deve fornecer uma representação clara das relações entre os modelos no seu banco de dados.
+
+```mermaid
+graph TD
+    A[Device] -->|has| B[DeviceStatus]
+    A -->|logs| C[DeviceLog]
+    C -->|belongs to| A
+    B -->|has| A
+
+```
+
 ```bash
 ## crie o .env na raiz do seu projeto para con as informaçoes abaixo
 PORT=3000
