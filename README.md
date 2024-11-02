@@ -28,11 +28,11 @@ Com essa stack tecnológica, o **Devices** oferece uma base sólida para o desen
 Para iniciar o servidor de desenvolvimento, execute:
 
 ```bash
-npm run dev
-# ou
-yarn dev
-# ou
+sudo docker compose up -d
+pnpm migrate
 pnpm dev
-# ou
-bun dev
 ```
+
+## Observação
+
+**_ Esses comandos já estão prontos no package.json, caso você prefira rodar conforme seu costume. Consulte a documentação do Prisma para mais informações _**.
